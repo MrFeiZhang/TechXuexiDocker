@@ -11,5 +11,6 @@ RUN cd /xuexi/; wget https://dl.google.com/linux/chrome/deb/pool/main/g/google-c
 RUN cd /xuexi/; wget -O chromedriver_linux64_92.0.4515.107.zip http://npm.taobao.org/mirrors/chromedriver/92.0.4515.107/chromedriver_linux64.zip; unzip chromedriver_linux64_92.0.4515.107.zip; chmod 755 chromedriver; ls -la; ./chromedriver --version
 ENV AccessToken=
 ENV Secret=
+ENV Nohead=True
 WORKDIR /xuexi
 ENTRYPOINT ["./start.sh"]

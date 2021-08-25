@@ -2,7 +2,7 @@ FROM python:3.7-slim
 
 RUN apt-get update
 RUN apt-get install -y wget unzip libzbar0
-RUN wget -O master.zip https://github.com/MrFeiZhang/TechXueXi/archive/refs/heads/dev.zip; mkdir xuexi;unzip master.zip;cp -r ./TechXueXi-master/SourcePackages/* /xuexi; cp ./TechXueXi-master/requirements.txt /xuexi
+RUN wget -O dev.zip https://github.com/MrFeiZhang/TechXueXi/archive/refs/heads/dev.zip; mkdir xuexi;unzip dev.zip;cp -r ./TechXueXi-dev/SourcePackages/* /xuexi; cp ./TechXueXi-dev/requirements.txt /xuexi
 # RUN rm -f /xuexi/config/*; ls -la
 COPY start.sh /xuexi
 RUN chmod +x /xuexi/start.sh
